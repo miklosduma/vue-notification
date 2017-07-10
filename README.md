@@ -11,7 +11,7 @@ Demo: http://vue-notification.yev.io/
 ### Version 1.3.0 changes 
 ❗️❗️❗️
 
-In version 1.3.0 velocity animation **is not a default option**. If you still want to use velicoty animations please take a look in [Velocity Animation](#velocity_animation) section.
+In version 1.3.0 velocity animation **is not a default option**. If you still want to use velicoty animations please take a look at [Velocity Animation](#velocity_animation) section.
 
 ### Install
 
@@ -55,11 +55,11 @@ All props are optional.
 | group          | String  | null         | Name of the notification holder, if specified |
 | width          | Number  | 300          | Width of notification holder |
 | classes        | String/Array | 'vue-notification' | List of classes that will be applied to notification element |
-| position       | String/Array | 'top right'  | Part of the screen where notifications will pop out |
+| position       | String/Array | 'top right'  | Part of the screen where notifications will pop up |
 | animation-type | String  | 'css'      | Type of animation, currently supported types are `css` and `velocity` |
 | animation-name | String  | null       | Animation name required for `css` animation |
 | animation      | Object  | `$`*         | Animation configuration for `Velocity` animation |
-| duration       | Number  | 3000         | Time (ms) animation stays visible (if **negative** - notification will stay **forever** or until clicked) |
+| duration       | Number  | 3000         | Time (ms) until animation stays visible (if **negative** - notification will stay until clicked) |
 | speed          | Number  | 300          | Speed of animation showing/hiding |
 | reverse        | Boolean | false        | Show notifications in reverse order |
 
@@ -104,7 +104,7 @@ this.$notify('text')
 
 ### Groups
 
-If you are planning to use `notification` component for 2 or more completely different types of notifications (for example, authentication error messages in top center and generic app notifications in bottom-right corner) - you can specify `group` property which is essentially a name of notification holder.
+If you are planning to use `notification` component for 2 or more completely different types of notifications (for example, authentication error messages in top center and generic app notifications in bottom-right corner) - you can specify `group` property which is essentially a name of a notification holder.
 
 Example:
 
@@ -203,7 +203,7 @@ Scope props:
 | Name  | Type     | Description                         |
 | ---   | ---      | ---                                 |
 | item  | Object   | notification object                 |
-| close | Function | when called closes the notification |
+| close | Function | closes the notification when called|
 
 Example:
 
@@ -228,7 +228,7 @@ Example:
 
 ### Velocity Animation
 
-Plugin can use use `Velocity` library to make js-powered animations. To start using it you will have to manually install `velocity` & supply the librarty to `vue-notification` plugin (reason for doing that is to reduce the size of this plugin).
+Plugin can use `Velocity` library to make js-powered animations. To start using it, you will have to manually install `velocity` & supply the library to `vue-notification` plugin (reason for doing that is to reduce the size of this plugin).
 
 In your `main.js`: 
 
